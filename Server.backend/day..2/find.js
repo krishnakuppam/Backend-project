@@ -11,7 +11,7 @@ const user = [
     { id: 7, name: 'Grace' },
     { id: 8, name: 'Heidi' },
     { id: 9, name: 'Ivan' },
-    { id: 10, name: 'Judy' }
+    { id: 10, name: 'Judy' }        
     
 ];
 
@@ -20,9 +20,11 @@ app.get('/user', (req, res) => {
     res.json(user);
 });
 
-// app.get('/user/:id', (req, res) => {
-//     const id = parseInt(req.params.
-
+app.get('/user/:name', (req, res) => {
+    let username = req.params.name;
+    let foundUser = user.find(u => u.name.toLowerCase() === username.toLowerCase());
+   
+});
 
 
 app.listen(5051, () => {
