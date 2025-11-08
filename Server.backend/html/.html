@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <header class="main-header">
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>This is a sample website to demonstrate HTML structure.</p>
+
+        <article>
+            <h3>Our Mission</h3>
+            <p>To provide quality content and resources for web development.</p>
+        </article>
+    </section>
+
+    <aside>
+        <h4>Related Links</h4>
+        <ul>
+            <li><a href="#link1">Link 1</a></li>
+            <li><a href="#link2">Link 2</a></li>
+        </ul>
+    </aside>
+    <footer class="main-footer">
+        <p>&copy; 2024 Sample Website. All rights reserved.</p>
+        <footer>
+  <p>&copy; 2025 TechNova Pvt. Ltd.</p>
+  <p>All rights reserved.</p>
+  <nav>
+    <a href="/privacy-policy">Privacy Policy</a> |
+    <a href="/terms">Terms of Service</a> |
+    <a href="/contact">Contact Us</a>
+  </nav>
+</footer>
+
+<img src="cat.jpg" alt="A tabby cat sitting on a sofa">
+
+
+    </footer>
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit</a>
+
+
+    <template id="formTemplate">
+  <form>
+    <label>Name:</label>
+    <input type="text" placeholder="Enter your name"><br>
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email"><br>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<div id="formContainer"></div>
+
+<script>
+  const formClone = document.getElementById("formTemplate").content.cloneNode(true);
+  document.getElementById("formContainer").appendChild(formClone);
+</script>
+
+<input type="tel" pattern="\d{10}" required>
+
+<form id="f"></form>
+<input form="f" name="x">
+<form enctype="multipart/form-data">
+  <input type="file" name="avatar" accept="image/*">
+</form>
+
+<video controls width="640">
+  <source src="video.mp4" type="video/mp4">
+  Your browser doesn't support video.
+</video>
+
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+  <h2>Accessible Image Example</h2>
+
+  <figure>
+    <img src="chart.png" alt="Bar chart showing increase in sales for each quarter">
+    <figcaption>Quarterly sales report showing consistent growth in 2025.</figcaption>
+  </figure>
+
+<canvas id="c" width="300" height="150"></canvas>
+
+
+<script>
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+ctx.fillStyle = 'lightblue';
+ctx.fillRect(10,10,100,50);
+</script>
+
+<button aria-pressed="false" aria-label="Like">♥</button>
+
+<script>
+  const btn = document.querySelector('button');
+  btn.addEventListener('click', () => {
+    const pressed = btn.getAttribute('aria-pressed') === 'true';
+    btn.setAttribute('aria-pressed', !pressed);
+  });
+</script>
+
+<img src="big.jpg" loading="lazy" alt="...">
+
+<link rel="preload" href="/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+
+
+
+</body>
+</html>
