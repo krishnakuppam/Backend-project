@@ -23,7 +23,11 @@ app.get('/user', (req, res) => {
 app.get('/user/:name', (req, res) => {
     let username = req.params.name;
     let foundUser = user.find(u => u.name.toLowerCase() === username.toLowerCase());
-   
+    if (foundUser) {
+        res.json(foundUser);
+    } else {
+        res.status(404).json({ message: 'User not found' });
+    }
 });
 
 
