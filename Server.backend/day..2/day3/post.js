@@ -14,3 +14,6 @@ app.post('/data', (req, res) => {
 app.listen(5052, () => {
     console.log('Server is running on http://localhost:5052');
 });
+
+
+// mongodb+srv://krishnakuppam38:krishnakuppam@cluster0.25wgae8.mongodb.net/
