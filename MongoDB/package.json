@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "main": "Post.js",
   "scripts": {
+    "start": "node Post1.js",
+    "dev": "nodemon Post1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }
