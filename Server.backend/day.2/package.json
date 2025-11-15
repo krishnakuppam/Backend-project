@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "find.js",
   "scripts": {
+    "start": "node find.js",
+    "dev": "nodemon find.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,5 +13,8 @@
   "dependencies": {
     "express": "^5.1.0",
     "mongodb": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

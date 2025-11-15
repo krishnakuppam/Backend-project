@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const Product = require('./model/products');
+const products = require('./model/products');
 
 
 
@@ -19,8 +20,17 @@ async function main() {
     }
 }
 
+app.post('/addproducts', async (req, res) => {
+  
 
+    let newproduct = new Product (req.body).save();
+    res.send(newproduct);
+});
 
+app.get("/products",async(req,res)=>{
+    let products=await Product.find();
+    res.send(products); 
+});
 
 
 
