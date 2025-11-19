@@ -12,9 +12,7 @@ app.use(express.json());
 // ----------------------
 async function main() {
     try {
-        await mongoose.connect(
-            'mongodb+srv://amongwith:amongwith@cluster0.tltfv96.mongodb.net/'
- );
+        await mongoose.connect('mongodb+srv://krishna:krishna0@cluster0.ruzdnvi.mongodb.net/');
         console.log('Connected to MongoDB');
     } catch (error) {
         console.error('MongoDB connection failed:', error);
@@ -42,6 +40,22 @@ app.post('/addproducts', async (req, res) => {
 app.get('/products', async (req, res) => {
     const allProducts = await Product.find();
     res.send(allProducts);
+});
+
+
+app.get('/products/:name', async (req, res) => {
+    const product = await Product.findOne({ name: req.params.name });
+    res.send(product);
+});
+
+app.delete('/delete/:name', async (req, res) => {
+    const deletedProduct = await Product.findOneAndDelete({ name: req.params.name });
+    res.send(deletedProduct);
+});
+
+app.put('/update/:name', async (req, res) => {
+    const updatedProduct = await Product.findOneAndUpdate({ name: req.params.name }, req.body, { new: true });
+    res.send(updatedProduct);
 });
 
 // ----------------------
